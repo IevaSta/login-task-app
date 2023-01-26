@@ -2,6 +2,7 @@ function Background() {
 
     return (
         <div className="bin-background">
+            {/* shapes -> copied svg from figma */}
             <div className="bb-1">
                 <div className="circle-top">
                     <svg width="388" height="388" viewBox="0 0 388 388" fill="none" xmlns="http://www.w3.org/2000/svg">
