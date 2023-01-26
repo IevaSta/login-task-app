@@ -8,11 +8,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(true)
 
   return (
-    <main className='container'>
+    <>
 
       {loggedIn === true ? <LoginPage /> : <GreetingPage />}
 
-    </main>
+    </>
   );
 }
 

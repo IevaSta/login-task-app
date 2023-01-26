@@ -1,0 +1,42 @@
+.bin-background {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+    .bb-1 {
+        width: 50%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .circle-1 {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+        }
+
+        .circle-2 {
+            width: 30px;
+            height: 30px;
+            background-color: pink;
+        }
+    }
+
+    .bb-2 {
+        width: 50%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .elipse-1 {
+            width: 30px;
+            height: 30px;
+            background-color: yellow;
+        }
+    }
+}

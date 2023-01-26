@@ -1,3 +1,7 @@
+@import 'Scss/theme';
+@import 'Scss/main';
+@import 'Scss/background';
+
 body,
 body * {
     margin: 0;
@@ -5,7 +9,9 @@ body * {
     vertical-align: top;
     box-sizing: border-box;
     font-family: 'PT Sans', sans-serif;
+
 }
 
-@import 'Scss/theme';
-@import 'Scss/main';
+body {
+    background-color: $background-primary;
+}
