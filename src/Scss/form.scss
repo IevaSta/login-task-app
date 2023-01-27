@@ -14,7 +14,14 @@
 
         .icon {
             position: absolute;
-            margin-left: -370px;
+            margin-left: -240px;
+        }
+
+        @media (min-width: $tablet) {
+            .icon {
+                position: absolute;
+                margin-left: -370px;
+            }
         }
 
         input {
