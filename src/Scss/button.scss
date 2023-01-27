@@ -12,7 +12,7 @@ button {
     color: $green-button;
     cursor: pointer;
     display: inline-flex;
-    font-size: $text-size-secondary;
+    font-size: $text-size-secondary-sm;
     font-weight: 700;
     justify-content: center;
     margin: 0;
@@ -31,5 +31,11 @@ button {
     &:active {
         background-color: #19327e;
         transform: translateY(0);
+    }
+}
+
+@media (min-width: $tablet) {
+    button {
+        font-size: $text-size-secondary-r;
     }
 }

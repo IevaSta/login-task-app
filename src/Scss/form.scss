@@ -29,7 +29,7 @@
             height: 50px;
             padding-left: 56px;
             font-weight: 700;
-            font-size: $text-size-secondary;
+            font-size: $text-size-secondary-sm;
             background-color: $background-primary;
             color: $text-color;
             outline: none;
@@ -41,6 +41,7 @@
         @media (min-width: $tablet) {
             .input {
                 padding-left: 66px;
+                font-size: $text-size-secondary-r;
             }
         }
 

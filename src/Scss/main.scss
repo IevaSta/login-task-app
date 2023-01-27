@@ -23,14 +23,26 @@
 
 .main-title {
     width: 100%;
-    font-size: $text-size-primary;
+    font-size: $text-size-primary-sm;
     font-weight: 700;
     line-height: 69px;
 }
 
+@media (min-width: $tablet) {
+    .main-title {
+        font-size: $text-size-primary-r;
+    }
+}
+
 .notice {
     width: 100%;
-    font-size: $text-size-tertiary;
+    font-size: $text-size-tertiary-sm;
     font-weight: 700;
     line-height: 35px;
+}
+
+@media (min-width: $tablet) {
+    .notice {
+        font-size: $text-size-tertiary-r;
+    }
 }
