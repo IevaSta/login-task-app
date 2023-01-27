@@ -1,5 +1,6 @@
 .form-Login>.greem-button {
     margin-top: 53px;
+
 }
 
 button {
@@ -31,6 +32,12 @@ button {
     &:active {
         background-color: #19327e;
         transform: translateY(0);
+    }
+
+
+    &.button-logout,
+    &.button-home {
+        width: 433px;
     }
 }
 

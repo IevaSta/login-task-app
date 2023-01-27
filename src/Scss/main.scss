@@ -21,6 +21,11 @@
     }
 }
 
+.button-container {
+    display: flex;
+    margin-top: 50px;
+}
+
 .main-title {
     width: 100%;
     font-size: $text-size-primary-sm;
