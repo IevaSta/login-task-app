@@ -2,14 +2,22 @@
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     min-height: 100vh;
+}
 
+.bin-content {
+    z-index: 1;
+    text-align: center;
+    margin-top: 202px;
+    color: $text-color;
+    width: 300px;
+}
+
+@media (min-width: $tablet) {
     .bin-content {
-        z-index: 1;
-        color: $text-color;
-        // width: 432px;
+        width: 433px;
     }
 }
 
@@ -17,10 +25,12 @@
     width: 100%;
     font-size: $text-size-primary;
     font-weight: 700;
+    line-height: 69px;
 }
 
 .notice {
     width: 100%;
     font-size: $text-size-tertiary;
     font-weight: 700;
+    line-height: 35px;
 }
