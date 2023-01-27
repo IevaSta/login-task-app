@@ -2,11 +2,11 @@
     display: flex;
     flex-direction: column;
 
-    label:first-child {
+    .label:first-child {
         margin: 49px 0 21px 0;
     }
 
-    label {
+    .label {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -20,21 +20,28 @@
         @media (min-width: $tablet) {
             .icon {
                 position: absolute;
-                margin-left: -370px;
+                margin-left: -360px;
             }
         }
 
-        input {
+        .input {
             width: 100%;
             height: 50px;
-            padding-left: 60px;
+            padding-left: 56px;
             font-weight: 700;
             font-size: $text-size-secondary;
             background-color: $background-primary;
             color: $text-color;
+            outline: none;
             border: 1px solid $text-color;
             border-radius: $border-radius-input;
             font-family: 'PT Sans', 'Font Awesome 5 Free', sans-serif;
+        }
+
+        @media (min-width: $tablet) {
+            .input {
+                padding-left: 66px;
+            }
         }
 
         ::placeholder {

@@ -1,4 +1,35 @@
-form>button {
+.form-Login>.greem-button {
     margin-top: 53px;
+}
 
+button {
+    align-items: center;
+    background-clip: padding-box;
+    background-color: transparent;
+    border: 2px solid $green-button;
+    border-radius: $border-radius-button;
+    box-sizing: border-box;
+    color: $green-button;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: $text-size-secondary;
+    font-weight: 700;
+    justify-content: center;
+    margin: 0;
+    min-height: 50px;
+    position: relative;
+
+    &:hover,
+    &:focus {
+        background-color: #1c3a94;
+    }
+
+    &:hover {
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        background-color: #19327e;
+        transform: translateY(0);
+    }
 }
