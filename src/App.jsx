@@ -24,12 +24,8 @@ function App() {
           setLoggedIn
         }}>
 
-
         {!loggedIn ? <LoginPage /> : <GreetingPage />}
-
       </DataContext.Provider>
-
-
 
     </>
   );
