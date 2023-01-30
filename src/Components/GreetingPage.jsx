@@ -1,4 +1,15 @@
+import { useContext } from "react";
+import { logout_action } from "../Actions/dataActions";
+import DataContext from "./DataContext";
+
 function GreetingPage() {
+    const { dispachData, setLoggedIn } = useContext(DataContext);
+
+    const logOut = () => {
+        setLoggedIn(false)
+        dispachData(logout_action(true)
+        )
+    }
 
     return (
         <main className='container'>
@@ -7,7 +18,7 @@ function GreetingPage() {
                 <h2 className="notice">Please press Logout before closing the app</h2>
 
                 <div className="button-container">
-                    <button className="button-logout">Logout</button>
+                    <button className="button-logout" onClick={() => logOut()}>Logout</button>
                 </div>
             </div>
 
