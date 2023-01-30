@@ -1,21 +1,29 @@
-import { useState } from 'react';
+import { useReducer, useState } from 'react';
 import './App.scss';
-import ErrorPage from './Components/ErrorPage';
+import DataContext from './Components/DataContext';
 import GreetingPage from './Components/GreetingPage';
 import LoginPage from './Components/LoginPage';
+import data_reducer from './Reducers/dataReducer';
 
 function App() {
 
-  const [loggedIn, setLoggedIn] = useState(false)
+  const [data, dispachData] = useReducer(data_reducer, null);
 
   return (
     <>
+      <DataContext.Provider
+        value={{
+          data,
+          dispachData
+        }}>
 
-      {loggedIn === true ? <LoginPage /> : <ErrorPage />}
+        <LoginPage />
 
-      {/* {loggedIn === true ? <LoginPage /> : <GreetingPage />} */}
+        {/* {loggedIn === true ? <LoginPage /> : <GreetingPage />} */}
 
-      {/* <ErrorPage /> */}
+      </DataContext.Provider>
+
+
 
     </>
   );

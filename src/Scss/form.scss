@@ -30,13 +30,21 @@
             padding-left: 56px;
             font-weight: 700;
             font-size: $text-size-secondary-sm;
-            background-color: $background-primary;
+            background-color: transparent;
             color: $text-color;
             outline: none;
             border: 1px solid $text-color;
             border-radius: $border-radius-input;
-            font-family: 'PT Sans', 'Font Awesome 5 Free', sans-serif;
         }
+
+        .input:-webkit-autofill,
+        .input:-webkit-autofill:hover,
+        .input:-webkit-autofill:focus,
+        .input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px $background-primary inset !important;
+            -webkit-text-fill-color: $text-color  !important;
+        }
+
 
         @media (min-width: $tablet) {
             .input {
