@@ -9,7 +9,7 @@ function GreetingPage() {
         setLoggedIn(false)
         dispachData(logout_action(true)
         )
-    }
+    };
 
     return (
         <main className='container'>
