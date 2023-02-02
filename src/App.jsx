@@ -4,15 +4,27 @@ import DataContext from './Components/DataContext';
 import LoginPage from './Components/LoginPage';
 import GreetingPage from './Components/GreetingPage';
 import data_reducer from './Reducers/dataReducer';
+import { loggedIn_action } from './Actions/dataActions';
 
 function App() {
 
   const [data, dispachData] = useReducer(data_reducer, null);
-  const [loggedIn, setLoggedIn] = useState()
+  const [loggedIn, setLoggedIn] = useState(false)
 
   useEffect(() => {
-    setLoggedIn(() => localStorage.getItem('seemsneatData') ? true : false);
-  }, [setLoggedIn]);
+    dispachData(loggedIn_action())
+  }, []);
+
+  useEffect(() => {
+    if (data) {
+      if (data[0].email) {
+        setLoggedIn(true);
+      } else {
+        setLoggedIn(false);
+      }
+    }
+    console.log(data);
+  }, [data]);
 
   return (
     <>
@@ -24,7 +36,7 @@ function App() {
           setLoggedIn
         }}>
 
-        {!loggedIn ? <LoginPage /> : <GreetingPage />}
+        {loggedIn ? <GreetingPage /> : <LoginPage />}
       </DataContext.Provider>
 
     </>

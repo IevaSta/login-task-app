@@ -3,12 +3,10 @@ import { logout_action } from "../Actions/dataActions";
 import DataContext from "./DataContext";
 
 function GreetingPage() {
-    const { dispachData, setLoggedIn } = useContext(DataContext);
+    const { dispachData } = useContext(DataContext);
 
     const logOut = () => {
-        setLoggedIn(false)
-        dispachData(logout_action(true)
-        )
+        dispachData(logout_action());
     };
 
     return (

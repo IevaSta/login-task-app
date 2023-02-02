@@ -1,4 +1,4 @@
-import { login_const, logout_const } from "../Constants/dataConstants";
+import { loggedIn_const, login_const, logout_const } from "../Constants/dataConstants";
 
 export function login_action(newData) {
     return {
@@ -7,9 +7,14 @@ export function login_action(newData) {
     }
 }
 
-export function logout_action(loggedIn) {
+export function logout_action() {
     return {
         type: logout_const,
-        payload: loggedIn
+    }
+}
+
+export function loggedIn_action() {
+    return {
+        type: loggedIn_const,
     }
 }

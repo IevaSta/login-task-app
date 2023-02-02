@@ -1,5 +1,4 @@
 import { useContext, useEffect, useRef, useState } from "react";
-// import users from "../Accounts/accounts";
 import { login_action } from "../Actions/dataActions";
 import getId from "../Functions/getId";
 import inputValidation from "../Functions/inputValidation";
@@ -8,16 +7,7 @@ import DataContext from "./DataContext";
 import Notifications from "./Notifications";
 
 function LoginPage() {
-    const { data, dispachData, setLoggedIn } = useContext(DataContext);
-
-    const adminAcc = {
-        email: 'frontend@isawesome.com',
-        pass: 'cool'
-    };
-
-    // const user = users.filter(u => u.email === 'frontend@isawesome.com')[0]
-    // console.log(user);
-    // if (user && user.pass === 'cool') {}
+    const { data, dispachData } = useContext(DataContext);
 
     const emailRef = useRef();
     const passRef = useRef();
@@ -35,29 +25,21 @@ function LoginPage() {
         const isPass = !pass.error;
 
         if (isEmail && isPass) {
-            if (emailRef.current.value === adminAcc.email && passRef.current.value === adminAcc.pass) {
-                dispachData(
-                    login_action({
-                        id: getId(),
-                        email: email.value,
-                        pass: pass.value,
-                        loggedIn: false,
-                    })
-                );
-                emailRef.current.value = "";
-                passRef.current.value = "";
-                setLoggedIn(true)
-            } else {
-                setNotificationsList(n => [...n, 'Email or pass is not valid. Try again.'])
-                emailRef.current.value = "";
-                passRef.current.value = "";
-            }
+            dispachData(
+                login_action({
+                    id: getId(),
+                    email: email.value,
+                    pass: pass.value,
+                })
+            );
+            emailRef.current.value = "";
+            passRef.current.value = "";
         } else {
             if (!isEmail) {
-                setNotificationsList(n => [...n, email.notification])
+                setNotificationsList(n => [...n, email.notification]);
             }
             if (!isPass) {
-                setNotificationsList(n => [...n, pass.notification])
+                setNotificationsList(n => [...n, pass.notification]);
             }
         }
     }
