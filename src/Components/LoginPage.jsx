@@ -1,4 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
+// import users from "../Accounts/accounts";
 import { login_action } from "../Actions/dataActions";
 import getId from "../Functions/getId";
 import inputValidation from "../Functions/inputValidation";
@@ -13,6 +14,10 @@ function LoginPage() {
         email: 'frontend@isawesome.com',
         pass: 'cool'
     };
+
+    // const user = users.filter(u => u.email === 'frontend@isawesome.com')[0]
+    // console.log(user);
+    // if (user && user.pass === 'cool') {}
 
     const emailRef = useRef();
     const passRef = useRef();
